@@ -1,9 +1,10 @@
-import {contactName,contactEmail,contactTextarea, contactBtn} from "./elements"
+import {contactName,contactEmail,contactTextarea, contactBtn, contactForm} from "./elements"
 
 
-contactBtn.addEventListener("click", sendEmail)
+contactForm.addEventListener("submit", sendEmail)
 
-function sendEmail(params){
+function sendEmail(e){
+    e.preventDefault();
     var tempParams={
         from_name:  contactEmail.value,
         to_name: "jakubgond@gmail.com",
@@ -13,7 +14,18 @@ function sendEmail(params){
     };
     emailjs.send("service_jh6xhls","template_3rpbqdk", tempParams )
             .then(function(res){
-                console.log("success",res.status)
+                if(res.status === 200){
+                    contactEmail.value ="";
+                    contactName.value="";
+                    contactTextarea.value="";
+                    contactBtn.textContent = "Sent!"
+    
+                    setTimeout(()=>{
+                        contactBtn.textContent = "Send"  
+                    },3000)
+                }
+
+
             })
 }
 

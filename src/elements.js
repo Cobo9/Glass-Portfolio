@@ -4,3 +4,4 @@ export const contactName = document.querySelector(".contact__name");
 export const contactEmail = document.querySelector(".contact__email");
 export const contactTextarea = document.querySelector(".contact__textarea");
 export const contactBtn = document.querySelector(".contact__button");
+export const contactForm = document.querySelector(".contact__form");

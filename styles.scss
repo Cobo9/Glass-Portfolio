@@ -49,6 +49,14 @@ a {
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover,
+.button:active {
+    background: transparent;
+    border: 2px rgba(106, 130, 251, 1) solid;
+    color: rgb(252, 92, 125);
 }
 
 .box {
