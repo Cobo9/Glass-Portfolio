@@ -56,7 +56,8 @@ a {
 
 .box {
     background: rgba(255, 255, 255, 0.2);
-    width: 16rem;
+    width: 80%;
+    max-width: 18rem;
     height: 30rem;
     border-radius: 1rem;
     box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
@@ -102,7 +103,7 @@ a {
 
 
     .projects {
-        animation: fromRight 2s;
+        animation: fromLeft 2s;
 
         @media screen and (min-width: 800px) {
             animation: fromBottom 2s;
@@ -185,6 +186,13 @@ a {
     }
 
     .stack {
+
+        animation: fromRight 2s;
+
+        @media screen and (min-width: 800px) {
+            animation: fromTop 2s;
+        }
+
         .stack__learn {
             text-align: center;
         }
@@ -220,13 +228,18 @@ a {
                 transition: .5s;
             }
         }
+
+        .stack__text {
+            font-size: 0.8rem;
+            transition: .2s;
+        }
     }
 
     .contact {
         animation: fromLeft 2s;
 
         @media screen and (min-width: 800px) {
-            animation: fromTop 2s;
+            animation: fromBottom 2s;
         }
 
         input,

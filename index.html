@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuba Gond</title>
     <link rel="stylesheet" href="./css/styles.min.css">
+
 </head>
 <body>
     <div class="container">
@@ -72,12 +73,22 @@
         <section class="contact">
             <div class="contact__box box">
                 <h1 class="contact__heading">Contact me</h1>
-                <input class="contact__name" type="text" placeholder="name">
-                <input class="contact__email" type="email" placeholder="email">
-                <textarea class="contact__textarea" name="" id="" cols="30" rows="10" resize="none" placeholder="message"></textarea>
-                <button class="contact__button button">Send</button>
+
+                    <input class="contact__name" type="text" placeholder="name">
+                    <input class="contact__email" type="email" placeholder="email">
+                    <textarea class="contact__textarea" name="" id="" cols="30" rows="10" resize="none" placeholder="message"></textarea>
+                    <button class="contact__button button">Send</button>
+
             </div>
         </section>
     </div>
+    <script src="dist/main.js"></script>
+
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_P9jmAfoHKLbp3jyxnEFff");
+    })();
+    </script>
 </body>
 </html>
